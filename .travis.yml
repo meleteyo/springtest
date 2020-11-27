@@ -53,7 +53,7 @@ deploy:
 
     deployment_group: melete-app-deploy-group
 
-    region: app-northeast-2
+    region: ap-northeast-2
     wait-until-deployed: true
 
 
