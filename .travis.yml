@@ -33,6 +33,25 @@ deploy:
     local_dir: deploy
     wait-until-deployed: true
 
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
+    bucket: melete-build
+    key: melete-service.zip
+
+    bundle_type: zip
+    application: melete-app
+
+    deployment_group: melete-app-deploy-group
+
+    region: app-northeast-2
+    wait-until-deployed: true
+
+
+
+
+
 notifications:
   email:
     recipients:
